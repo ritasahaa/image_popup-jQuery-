@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rita Sah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body onload="myFunction()">
+    <div id="loading">
+        <iframe src="https://giphy.com/embed/xTk9ZvMnbIiIew7IpW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+    <div id="popUpMain" style="display: none">
+        <div id="popup">
+            <h1 id="newsHeading">Subscribe to our Newsletter</h1>
+            <input type="email" id="emailId" placeholder="user@email.com">
+            <br>
+            <button class="submitId">Subscribe</button>
+            <button class="submitId">No Thanks</button>
+        </div>
+    </div>
+
+    <header>
+        <nav class="header_menu">
+            <div class="logo">
+                <img src="thapalogo.png" alt="Thapa Logo">
+            </div>
+            <div class="menu_list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">My Work</a></li>
+                    <li><a href="https://ritaaportfolio.netlify.app">Portfolio</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header_content">
+            <h2></h2>Rita Sah / React Developer / WEB DEVELOPER</h2>
+            <h1>Rita Sah</h1>
+            <div class="header_buttons">
+                <button><a href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA?view_as=subscriber">Rita Vlog</a></button>
+                <button><a href="https://www.thapatechnical.com/">Rita Blog</a></button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function myFunction() {
+            const preloader = document.getElementById("loading");
+            setTimeout(function() {
+                preloader.style.display = "none";
+            }, 2000);
+        }
+
+        $(document).ready(function(){
+            setTimeout(function(){
+                $("#popUpMain").css('display','block')},8000)
+        })
+
+        $(".submitId").click(function(){
+            $("#popUpMain").css('display','none')
+        })
+    </script>
+</body>
+</html>
